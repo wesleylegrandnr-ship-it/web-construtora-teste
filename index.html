@@ -401,6 +401,9 @@ URL.revokeObjectURL(url);
 
 atualizar();
 if("serviceWorker" in navigator && location.protocol==="https:"){navigator.serviceWorker.register("./sw.js").catch(()=>{});}
+
+// Disponibiliza os comandos dos botões HTML ao script ES module.
+Object.assign(window, { entrar, sair, pagina, adicionarObra, adicionarOrcamento, adicionarFuncionario, registrarPonto, adicionarMaterial, exportar });
 </script>
 </body>
 </html>
